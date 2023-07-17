@@ -1,0 +1,99 @@
+@keyframes boxGoRight{
+  0% {margin-left:  0;}
+  100% {margin-left: 100px;}
+}
+@keyframes aOncolor{
+  0% {color: white;}
+  100% {color: rgba(255, 255, 255, 0);}
+}
+@keyframes aOffcolor {
+  0% {color: rgba(255, 255, 255, 0);}
+  100% {color: white}
+}
+body{
+  font-family: 'Yatra One', cursive;
+  margin: 0;
+}
+nav {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+
+}
+.box {
+  width: 200px;
+  height: 25px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+}
+.boxLeft, .boxRight{
+  width: 98px;
+  height: auto;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.on {
+  width: 100px;
+  height: 25px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  background-color: black;
+}
+.aOn {
+  position: absolute;
+  z-index: 2;
+}
+.aOff {
+  z-index: 1;
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+}
+
+.on:active{
+  animation-name: boxGoRight;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.aOn:active{
+  animation-name: aOncolor;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.aOff:active{
+  animation-name: aOffcolor;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+/* .off{
+  z-index: 5;
+  top: 2px;
+  left: 100px;
+}
+.aOff{
+  color: rgba(255, 255, 255, 0);
+} */
+/* .test{
+  width: 100px;
+  height: 48px;
+  background-color: black;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  cursor: pointer;
+}*/
